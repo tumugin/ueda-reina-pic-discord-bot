@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
-	"ueda-reina-pic-discord-bot/src/reinalibs"
+	"ueda-reina-pic-discord-bot/reinalibs"
 )
 
 var authToken string
