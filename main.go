@@ -65,7 +65,9 @@ func initBot() {
 }
 
 func onMessage(session *discordgo.Session, message *discordgo.MessageCreate) {
-	if message.Content != "うえしゃま～" {
+	// be careful for 〜 strings in Windows OS!!!!!
+	// https://ch.nicovideo.jp/suwatoh/blomaga/ar634436
+	if !(message.Content == "うえしゃま\u301C" || message.Content == "うえしゃま\uFF5E") {
 		return
 	}
 	reinaPicUrl := reinaPics.GetRandomReinaPic()
